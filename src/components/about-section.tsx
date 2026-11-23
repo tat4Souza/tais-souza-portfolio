@@ -1,8 +1,22 @@
+import { certificates, courses, personalInfo } from "@/lib/data/data";
 import CertificateCard from "./certificate-card";
 import DegreesCard from "./degrees-card";
-import { Carousel, CarouselContent, CarouselItem } from "./ui/carousel";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  type CarouselApi,
+} from "./ui/carousel";
+import { useState } from "react";
+import { CarouselPagination } from "./carousel-pagination";
 
 function AboutSection() {
+  const { aboutMeSummary, workStyleSummary } = personalInfo;
+  const degrees = courses;
+  const cert = certificates;
+
+  const [api, setApi] = useState<CarouselApi>();
+
   return (
     <section
       id="about"
@@ -14,39 +28,36 @@ function AboutSection() {
             Sobre mim
           </h4>
           <div>
-            <p className="text-foreground leading-8">
-              Falar um pouco mais sobre mim. Dar foco no desenvolvimento
-              frontend, falar sobre o design UI/UX e como minha paixão pela arte
-              interfere no meu aproveitamento disso.
-            </p>
-            <p className="text-foreground leading-8 mt-5">
-              Falar um pouco sobre como eu trabalho. Qual o meu perfil pessoal,
-              indicando aspectos positivos da minha personalidade.
-            </p>
+            <p className="text-foreground leading-8">{aboutMeSummary}</p>
+            <p className="text-foreground leading-8 mt-5">{workStyleSummary}</p>
           </div>
         </div>
         <ul className="flex flex-col gap-6 flex-1">
-          <DegreesCard />
-          <DegreesCard />
-          <DegreesCard />
+          {degrees.map((degree, index) => (
+            <DegreesCard course={degree} key={index} />
+          ))}
         </ul>
       </div>
 
-      <div className="flex gap-6 ">
+      <div className="flex flex-col gap-4 w-full">
         <Carousel
+          setApi={setApi}
           opts={{
             align: "start",
             loop: true,
           }}
+          className="w-full"
         >
-          <CarouselContent className=" py-5">
-            {Array.from({ length: 5 }).map((_, index) => (
-              <CarouselItem key={index} className="basis-1/4">
-                <CertificateCard />
+          <CarouselContent className="-ml-4 py-5">
+            {cert.map((item, index) => (
+              <CarouselItem key={index} className="pl-4 basis-1/4">
+                <CertificateCard certificate={item} />
               </CarouselItem>
             ))}
           </CarouselContent>
         </Carousel>
+
+        <CarouselPagination api={api} />
       </div>
     </section>
   );

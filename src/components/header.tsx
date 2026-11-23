@@ -20,6 +20,19 @@ function Header() {
   const [isFixed, setIsFixed] = useState(false);
   const [height, setHeight] = useState<number>();
 
+  const [activeHash, setActiveHash] = useState<string>(
+    () => window.location.hash || "#",
+  );
+
+  useEffect(() => {
+    const handleHashChange = () => {
+      setActiveHash(window.location.hash || "#");
+    };
+
+    window.addEventListener("hashchange", handleHashChange);
+    return () => window.removeEventListener("hashchange", handleHashChange);
+  }, []);
+
   useLayoutEffect(() => {
     const measure = () => setHeight(headerRef.current?.offsetHeight);
     measure();
@@ -54,14 +67,28 @@ function Header() {
         <div className={isFixed ? "mx-auto w-[75%]" : "w-full"}>
           <NavigationMenu className="max-w-full w-full">
             <NavigationMenuList className="justify-between">
-              {navOptions.map(({ title, url }) => (
-                <NavigationMenuItem key={title}>
-                  <NavigationMenuLink
-                    className="nav__item"
-                    render={<a href={url}>{title}</a>}
-                  />
-                </NavigationMenuItem>
-              ))}
+              {navOptions.map(({ title, url }) => {
+                const isActive = activeHash === url;
+
+                return (
+                  <NavigationMenuItem key={title}>
+                    <NavigationMenuLink
+                      render={
+                        <a
+                          href={url}
+                          onClick={() => setActiveHash(url)}
+                          data-active={isActive ? "true" : undefined}
+                          className={`nav__item ${
+                            isActive ? " bg-popover/50!" : ""
+                          }`}
+                        >
+                          {title}
+                        </a>
+                      }
+                    />
+                  </NavigationMenuItem>
+                );
+              })}
               <NavigationMenuItem>
                 <NavigationMenuLink
                   className="nav__item"

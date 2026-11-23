@@ -5,42 +5,26 @@ import {
   CarouselPrevious,
 } from "./ui/carousel";
 import CustomBadge from "./custom-badge";
-import ProjectItem, { type ProjectProps } from "./project-item";
+import ProjectItem from "./project-item";
+import { academicProjects, personalProjects } from "@/lib/data/data";
+import { useState } from "react";
 function ProjectsSection() {
-  const data: ProjectProps[] = [
-    {
-      tituloVideo: "Editor de histórias",
-      videoUrl: "/storiaVideo.mp4",
-      inicio: new Date(),
-      fim: new Date(),
-      tecnologias: ["tailwind css", "react", "next.js", "sass"],
-      githubUrl: "/",
-      demoUrl: "/",
+  // const data: ProjectProps[] = academicProjects;
+  const [data, setData] = useState(academicProjects);
+  const [isAcademic, setIsAcademic] = useState(true);
+  const [isPersonal, setIsPersonal] = useState(false);
 
-      tituloProjeto: "Storia Editor",
-      papeis: ["scrum master", "dev frontend", "designer UIX/UX"],
-      descProblema:
-        "Texto para a descrição do problema, falando sobre as dores do cliente cuidadosamente.",
-      descSolucao:
-        "Texto para falar sobre a solução desenvolvida. Citando quais são as funcionalidades que a plataforma possui.",
-      descConhecimentos:
-        "Texto para falar sobre habilidades e conhecimentos técnicos adquiridos e conhecimentos pessoais e sociais exercitados.",
-    },
-    {
-      tituloVideo: "AAAAAAAA",
-      inicio: new Date(),
-      fim: new Date(),
-      tecnologias: ["tailwind css", "react", "next.js", "sass"],
-      githubUrl: "/",
-      demoUrl: "/",
+  const handleToogleAcademic = () => {
+    setIsAcademic(true);
+    setIsPersonal(false);
+    setData(academicProjects);
+  };
 
-      tituloProjeto: "Storia Editor",
-      papeis: ["scrum master", "dev frontend", "designer UIX/UX"],
-      descProblema: "Descrição do problema",
-      descSolucao: "Descrição do problema",
-      descConhecimentos: "Conhecimentos adquiridos",
-    },
-  ];
+  const handleTooglePersonal = () => {
+    setIsPersonal(true);
+    setIsAcademic(false);
+    setData(personalProjects);
+  };
 
   return (
     <section
@@ -58,8 +42,12 @@ function ProjectsSection() {
       </Carousel>
 
       <div className="flex gap-5 *:text-base!">
-        <CustomBadge>Acadêmicos</CustomBadge>
-        <CustomBadge>Pessoais</CustomBadge>
+        <CustomBadge onClick={handleToogleAcademic} active={isAcademic}>
+          Acadêmicos
+        </CustomBadge>
+        <CustomBadge onClick={handleTooglePersonal} active={isPersonal}>
+          Pessoais
+        </CustomBadge>
       </div>
     </section>
   );

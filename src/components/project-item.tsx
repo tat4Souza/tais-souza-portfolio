@@ -1,24 +1,9 @@
 import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 import { Badge } from "./ui/badge";
-import { Button } from "./ui/button";
 import { Card, CardContent, CardTitle } from "./ui/card";
 import { CarouselItem } from "./ui/carousel";
-
-export interface ProjectProps {
-  tituloVideo: string;
-  videoUrl?: string;
-  inicio: Date;
-  fim: Date;
-  tecnologias: string[];
-  githubUrl: string;
-  demoUrl: string;
-
-  tituloProjeto: string;
-  papeis: string[];
-  descProblema: string;
-  descSolucao: string;
-  descConhecimentos: string;
-}
+import type { ProjectProps } from "@/lib/types";
+import LinkButton from "./link-button";
 
 interface ProjectItemProps {
   project: ProjectProps;
@@ -27,60 +12,76 @@ interface ProjectItemProps {
 function ProjectItem({ project }: ProjectItemProps) {
   return (
     <CarouselItem>
-      <div className="p-1 flex  h-min-content gap-8">
-        <Card className="flex-1 pt-0 bg-card">
-          <video
-            src={project.videoUrl}
-            preload="metadata"
-            autoPlay
-            muted
-            loop
-            playsInline
-            className="relative z-20 aspect-video w-full object-cover "
-          />
+      <div className="p-1 flex  min-h-content items-center gap-8">
+        <Card className="flex-1 pt-0 bg-card  max-h-min">
+          {!project.image ? (
+            <video
+              src={project.videoUrl ?? ""}
+              preload="metadata"
+              autoPlay
+              muted
+              loop
+              playsInline
+              className="relative z-20 aspect-video w-full object-cover object-top"
+            />
+          ) : (
+            <img
+              src={project.videoUrl ?? ""}
+              alt="imagem"
+              className="relative z-20 aspect-video w-full object-cover object-top"
+            />
+          )}
           <CardTitle className="text-center -mt-15 z-30 bg-card font-mono max-w-max mx-auto px-20 py-5 rounded-tl-full rounded-tr-full text-foreground dark:text-primary-foreground">
-            <h4 className="text-sm">{project.tituloVideo}</h4>
-            <span className="font-serif text-xs ">
-              {project.inicio.toDateString()} -{project.fim.toDateString()}
+            <h4 className="text-sm">{project.videoName}</h4>
+            <span className="font-sans text-sm text-card-foreground">
+              {project.startDate} - {project.endDate}
             </span>
           </CardTitle>
-          <CardContent className="h-full flex flex-col gap-5  -mt-5">
-            <div className="flex gap-2 flex-wrap">
-              {project.tecnologias.map((tech) => (
+          <CardContent className="h-full flex flex-col justify-between gap-5  max-h-min -mt-5">
+            <div className="flex gap-2 flex-wrap justify-center">
+              {project.technologies.map((tech) => (
                 <Badge className="p-3 capitalize" key={tech}>
                   {tech}
                 </Badge>
               ))}
             </div>
-            <div className="w-full flex justify-end gap-5">
-              <Button variant="secondary" className="font-medium ">
-                <FaGithub /> <span>Github</span>
-              </Button>
-              <Button variant="secondary" className="font-medium">
-                <FaExternalLinkAlt />
-                <span>Demo</span>
-              </Button>
+            <div className="w-full flex justify-between items-center">
+              <span className=" bg-background px-6 font-medium py-2 rounded-full">
+                {project.partnerCompany}
+              </span>
+
+              <div className="flex gap-5">
+                <LinkButton url={project.githubUrl}>
+                  <FaGithub /> <span>Github</span>
+                </LinkButton>
+                {project.demoUrl && (
+                  <LinkButton url={project.demoUrl}>
+                    <FaExternalLinkAlt />
+                    <span>Demo</span>
+                  </LinkButton>
+                )}
+              </div>
             </div>
           </CardContent>
         </Card>
         <div className="flex-1 flex flex-col gap-10 justify-center">
           <div className="flex flex-col gap-2">
             <h3 className="font-serif text-primary text-3xl">
-              {project.tituloProjeto}
+              {project.projectName}
             </h3>
             <span className="bg-card border p-3 text-primary rounded-xl capitalize">
-              {project.papeis.map(
+              {project.roles.map(
                 (role, index) =>
-                  `${role} ${index !== project.papeis.length - 1 ? " • " : ""}`,
+                  `${role} ${index !== project.roles.length - 1 ? " • " : ""}`,
               )}
             </span>
           </div>
           <div className="flex flex-col gap-3 leading-8 text-foreground dark:text-primary-foreground">
-            <p>{project.descProblema}</p>
+            <p>{project.problemDescription}</p>
             <div className="border-b border-popover/50 my-2"></div>
-            <p>{project.descSolucao}</p>
+            <p>{project.solutionDescription}</p>
             <div className="border-b border-popover/50 my-2"></div>
-            <p>{project.descConhecimentos}</p>
+            <p>{project.acquiredKnowledgeDescription}</p>
           </div>
         </div>
       </div>

@@ -6,9 +6,10 @@ interface CustomButtonProps {
   children: ReactNode;
   className?: string;
   link?: boolean;
+  url?: string;
 }
 
-function CustomButton({ children, className, link }: CustomButtonProps) {
+function CustomButton({ children, className, link, url }: CustomButtonProps) {
   return (
     <Button
       variant={!link ? "outline" : "ghost"}
@@ -20,8 +21,8 @@ function CustomButton({ children, className, link }: CustomButtonProps) {
     >
       {link ? (
         <a
-          href="#projects"
-          className="bg-popover/50 cursor-pointer w-auto h-auto p-3 rounded-full border"
+          href={url}
+          className="bg-popover/50 cursor-pointer w-auto h-auto p-3 rounded-full border hover:scale-105 hover:-translate-y-1 transition-all"
         >
           {children}
         </a>

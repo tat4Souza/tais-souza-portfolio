@@ -1,24 +1,54 @@
-import { FaReact } from "react-icons/fa";
-// import { Card, CardContent, CardHeader } from "./ui/card";
+import { type IconType } from "react-icons";
+import {
+  FaJava,
+  FaNodeJs,
+  FaPython,
+  FaReact,
+  FaDocker,
+  FaCode,
+} from "react-icons/fa";
+import {
+  SiJavascript,
+  SiTypescript,
+  SiNextdotjs,
+  SiTailwindcss,
+  SiShadcnui,
+  SiFastify,
+  SiFlask,
+  SiPostgresql,
+  SiMysql,
+  SiPrisma,
+} from "react-icons/si";
+import { TbApi } from "react-icons/tb";
+
+const techIconsMap: Record<string, IconType> = {
+  JavaScript: SiJavascript,
+  TypeScript: SiTypescript,
+  React: FaReact,
+  "Next.js": SiNextdotjs,
+  Tailwind: SiTailwindcss,
+  "Shadcn/ui": SiShadcnui,
+  JavaFX: FaJava,
+
+  "Node.js": FaNodeJs,
+  Fastify: SiFastify,
+  Python: FaPython,
+  Flask: SiFlask,
+  Java: FaJava,
+  "API RESTful": TbApi,
+
+  PostgreeSQL: SiPostgresql,
+  MySQL: SiMysql,
+  Prisma: SiPrisma,
+  Docker: FaDocker,
+};
 
 function TechCard({ title }: { title: string }) {
+  const Icon = techIconsMap[title] || FaCode;
+
   return (
-    // <li className="flex flex-col justify-center gap-3 items-center max-w-min">
-    //   <Card className="rounded-xl border-t-3 border-sky-400 p-0 flex flex-row-reverse">
-    //     <CardHeader className="pt-2 flex justify-center">
-    //       <h4 className="capitalize font-medium text-sm text-sky-400">
-    //         {title}
-    //       </h4>
-    //     </CardHeader>
-    //     <CardContent className="pt-2 pb-4 flex justify-center">
-    //       <div className="bg-popover/50 p-3 rounded-full border">
-    //         <FaReact size={30} className="text-sky-400" />
-    //       </div>
-    //     </CardContent>
-    //   </Card>
-    // </li>
-    <li className="bg-popover/70 p-2 rounded-full border border-foreground/15 flex items-center gap-2 text-foreground font-semibold hover:-translate-y-1 hover:bg-primary/30 hover:border-primary hover:scale-102 cursor-pointer transtiion-all ease-in duration-150">
-      <FaReact />
+    <li className="bg-popover/70 p-2 rounded-full border border-foreground/15 flex items-center gap-2 text-foreground font-semibold hover:-translate-y-1 hover:bg-primary/30 hover:border-primary hover:scale-102 cursor-pointer transition-all ease-in duration-150">
+      <Icon className="size-4 shrink-0" />
       {title}
     </li>
   );

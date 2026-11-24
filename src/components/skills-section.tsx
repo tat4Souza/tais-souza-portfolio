@@ -28,11 +28,11 @@ function SkillsSection() {
   return (
     <section
       id="skills"
-      className="h-min-screen h-screen flex flex-col pt-25 w-[75%] gap-10"
+      className="h-min-screen sm:h-screen flex flex-col pt-25 w-[90%] sm:w-[75%] gap-10"
     >
       <div className="flex flex-col w-full">
         <h3 className="h3-title mb-6">Stack de Habilidades</h3>
-        <div className="flex gap-6 ">
+        <div className="flex gap-6 flex-col sm:flex-row ">
           <TechStackRow
             title="Desenvolvimetno Frontend"
             techsList={frontTechs}
@@ -44,13 +44,13 @@ function SkillsSection() {
           />
         </div>
       </div>
-      <div className="flex gap-6">
+      <div className="flex gap-6 flex-col sm:flex-row">
         <Card className="rounded-xl flex-1">
           <CardTitle className="pl-8 text-[18px] font-semibold text-primary">
             Soft Skills
           </CardTitle>
           <CardContent className="flex flex-col gap-6 px-8 ">
-            <div className="flex text-base">
+            <div className="flex text-base flex-col gap-6 sm:flex-row sm:gap-0">
               <p>{productOwner}</p>
               <div className="border-r mx-3"></div>
               <p>{scrumMaster}</p>

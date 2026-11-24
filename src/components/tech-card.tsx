@@ -47,7 +47,7 @@ function TechCard({ title }: { title: string }) {
   const Icon = techIconsMap[title] || FaCode;
 
   return (
-    <li className="bg-popover/70 p-2 rounded-full border border-foreground/15 flex items-center gap-2 text-foreground font-semibold hover:-translate-y-1 hover:bg-primary/30 hover:border-primary hover:scale-102 cursor-pointer transition-all ease-in duration-150">
+    <li className="bg-popover/70 p-2 rounded-full border border-foreground/15 flex items-center gap-2 dark:text-foreground font-semibold hover:-translate-y-1 hover:bg-primary/30 hover:border-primary hover:scale-102 cursor-pointer transition-all ease-in duration-150 text-secondary-foreground">
       <Icon className="size-4 shrink-0" />
       {title}
     </li>

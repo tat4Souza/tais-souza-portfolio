@@ -101,7 +101,9 @@ function Header() {
                           onClick={() => handleNavClick(url)}
                           data-active={isActive ? "true" : undefined}
                           className={`nav__item ${
-                            isActive ? "bg-popover/50!" : ""
+                            isActive
+                              ? "dark:bg-popover/50! bg-secondary!  text-primary border-primary/20 dark:border-border dark:text-primary"
+                              : ""
                           }`}
                         >
                           {title}

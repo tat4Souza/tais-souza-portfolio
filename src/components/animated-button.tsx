@@ -52,14 +52,14 @@ function AnimatedButton({
     <a
       ref={anchorRef}
       target="_blank"
-      className="inline-flex items-center hover:*:first:bg-primary! transtion-all"
+      className="inline-flex items-center hover:*:first:bg-primary! hover:*:first:text-secondary dark:hover:*:first:text-popover-foreground  transtion-all"
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
       href={url}
     >
       <div
         className={cn(
-          "bg-sidebar! rounded-full border cursor-pointer w-auto h-auto p-3 flex justify-center items-center border-border hover:bg-muted aria-expanded:bg-muted aria-expanded:text-foreground dark:bg-transparent dark:hover:bg-input/30 z-10 transition-all duration-500",
+          "dark:bg-sidebar! rounded-full border cursor-pointer w-auto h-auto p-3 flex justify-center items-center border-border hover:bg-muted aria-expanded:bg-muted aria-expanded:text-foreground  dark:hover:bg-input/30 z-10 transition-all duration-500      dark:text-popover-foreground text-primary bg-primary/10 ",
           className,
         )}
       >

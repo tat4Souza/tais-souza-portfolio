@@ -14,7 +14,7 @@ function CertificateCard({ certificate }: { certificate: CertificateProp }) {
   return (
     <Card className="text-base bg-popover/50 rounded-xl overflow-visible flex flex-col items-center lg:max-w-70 max-w-90 justify-between">
       <CardTitle className="-mt-10 flex flex-col items-center gap-3">
-        <span className="bg-popover p-2 px-4 font-serif uppercase text-primary rounded-full">
+        <span className="border border-border dark:border-transparent bg-popover p-2 px-4 font-serif uppercase text-primary rounded-full">
           {platform}
         </span>
       </CardTitle>

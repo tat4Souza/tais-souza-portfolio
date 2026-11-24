@@ -12,11 +12,20 @@ function ContactSection() {
       className="h-min-[95vh] h-[95vh] flex flex-col  w-full xl:w-[75%] gap-10 bg-[radial-gradient(52.78%_52.78%_at_50%_9.42%,rgba(184,56,49,0.26)_0%,rgba(59,4,12,0.00)_100%)] relative"
     >
       <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-0 pointer-events-none">
-        <img src="star.svg" alt="Estrela decorativa" />
+        <img
+          src="star-light.svg"
+          alt="Estela decorativa"
+          className="w-auto h-auto block dark:hidden"
+        />
+        <img
+          src="star.svg"
+          alt="Estela decorativa"
+          className="w-auto h-auto hidden dark:block"
+        />
       </div>
       <div className="flex flex-col items-center justify-center h-full z-10">
         <h3 className="font-mono text-4xl text-primary mb-3">Contato</h3>
-        <p className="dark:text-primary-foreground w-[80%]  lg:w-[30%] text-center mb-6">
+        <p className="text-secondary-foreground dark:text-primary-foreground w-[80%]  lg:w-[30%] text-center mb-6">
           Entre em contato comigo para trabalharmos juntos.
         </p>
         <a

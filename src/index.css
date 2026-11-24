@@ -13,10 +13,10 @@
   --card-foreground: oklch(0.2178 0 0);
   --popover: oklch(0.9779 0.0042 56.3756);
   --popover-foreground: oklch(0.2178 0 0);
-  --primary: oklch(0.465 0.147 24.9381);
+  --primary: #d62a2a;
   --primary-foreground: oklch(1 0 0);
   --secondary: oklch(0.9133 0.0414 17.935);
-  --secondary-foreground: oklch(0.3767 0.1546 29.2339);
+  --secondary-foreground: #800000;
   --muted: oklch(0.9442 0.007 39.4601);
   --muted-foreground: oklch(0.4364 0.0086 39.3937);
   --accent: oklch(0.8908 0.0556 18.2487);
@@ -217,7 +217,7 @@
   }
 
   .nav__item {
-    @apply bg-card/50 hover:bg-popover/50! xl:px-12! py-2! border rounded-tr-none! rounded-bl-none! text-primary font-serif px-10! text-base xl:text-xl!;
+    @apply dark:bg-card/50 dark:hover:bg-popover/50! xl:px-12! py-2! border rounded-tr-none! rounded-bl-none! dark:text-primary font-serif px-10! dark:border-border text-base xl:text-xl! bg-secondary/50 text-primary hover:bg-secondary! border-primary/10;
   }
 
   .h3-title {

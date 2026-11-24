@@ -93,7 +93,7 @@ function SkillsSection() {
 
                         <div className="absolute inset-0 bg-linear-to-t from-background/80 via-background/30 to-transparent z-20 pointer-events-none" />
                       </figure>
-                      <span className="bg-background px-5 text-foreground rounded-full border max-w-max -mt-10 p-2   font-mono z-30 top-[70%] ">
+                      <span className="bg-background px-5 dark:text-foreground rounded-full border max-w-max -mt-10 p-2   font-mono z-30 top-[70%] text-primary">
                         {design.designName}
                       </span>
                     </div>

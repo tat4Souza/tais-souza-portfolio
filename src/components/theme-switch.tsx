@@ -22,7 +22,10 @@ function ThemeSwitch({ className }: { className: string }) {
           setAlterTheme(true);
         }
       }}
-      className={cn("border-ring bg-ring/50! p-5 cursor-pointer", className)}
+      className={cn(
+        "bg-primary/80 hover:**:text-secondary hover:bg-primary/80 dark:hover:**:text-white  dark:border-ring dark:bg-ring/50! p-5 cursor-pointer",
+        className,
+      )}
     >
       <IoMdSunny className="h-[1.2rem] w-[1.2rem] scale-100 rotate-0 transition-all dark:scale-0 dark:-rotate-90" />
       <FaMoon className="absolute h-[1.2rem] w-[1.2rem] scale-0 rotate-90 transition-all dark:scale-100 dark:rotate-0" />

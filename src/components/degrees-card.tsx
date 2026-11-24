@@ -24,7 +24,9 @@ function DegreesCard({ course }: { course: CourseProps }) {
           </div>
         </CardDescription>
 
-        <h3 className="text-foreground text-base font-bold">{name}</h3>
+        <h3 className="text-gray-400 font-medium dark:text-foreground text-base dark:font-bold">
+          {name}
+        </h3>
       </CardTitle>
     </Card>
   );

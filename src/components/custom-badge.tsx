@@ -13,8 +13,8 @@ function CustomBadge({
   return (
     <span
       className={cn(
-        "bg-primary/40  text-primary-foreground py-2 px-6 rounded-full text-xs rounded-tl-none  font-semibold cursor-pointer hover:-translate-y-1 transition-all",
-        { "bg-primary": active },
+        "dark:bg-primary/40!  dark:text-primary-foreground! py-2 px-6 rounded-full text-xs rounded-tl-none  font-semibold cursor-pointer hover:-translate-y-1 transition-all bg-secondary! text-primary",
+        { "dark:bg-primary! bg-primary! text-secondary": active },
       )}
       onClick={onClick}
     >

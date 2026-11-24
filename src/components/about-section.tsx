@@ -24,12 +24,16 @@ function AboutSection() {
     >
       <div className="flex gap-15 mb-30 flex-col lg:flex-row">
         <div className="w-full lg:w-[40%]">
-          <h4 className="dark:text-primary-foreground text-5xl mb-6 font-serif">
+          <h4 className="text-primary  dark:text-primary-foreground text-5xl mb-6 font-serif">
             Sobre mim
           </h4>
           <div>
-            <p className="text-foreground leading-8">{aboutMeSummary}</p>
-            <p className="text-foreground leading-8 mt-5">{workStyleSummary}</p>
+            <p className="text-gray-600 dark:text-foreground leading-8">
+              {aboutMeSummary}
+            </p>
+            <p className="text-gray-600 dark:text-foreground leading-8 mt-5">
+              {workStyleSummary}
+            </p>
           </div>
         </div>
         <ul className="flex flex-col gap-6 flex-1">

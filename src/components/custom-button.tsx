@@ -22,7 +22,7 @@ function CustomButton({ children, className, link, url }: CustomButtonProps) {
       {link ? (
         <a
           href={url}
-          className="bg-popover/50 cursor-pointer w-auto h-auto p-3 rounded-full border hover:scale-105 hover:-translate-y-1 transition-all"
+          className="text-background dark:text-foreground bg-primary dark:bg-popover/50 cursor-pointer w-auto h-auto p-3 rounded-full border hover:scale-105 hover:-translate-y-1 transition-all"
         >
           {children}
         </a>

@@ -13,7 +13,7 @@ function ProjectItem({ project }: ProjectItemProps) {
   return (
     <CarouselItem>
       <div className="p-1 flex  min-h-content items-center gap-8 flex-col-reverse xl:flex-row">
-        <Card className="flex-1 pt-0 bg-card h-full!  max-h-min">
+        <Card className="flex-1 pt-0 bg-card  to-card h-full!  max-h-min ">
           {!project.image ? (
             <video
               src={project.videoUrl ?? ""}
@@ -32,8 +32,10 @@ function ProjectItem({ project }: ProjectItemProps) {
             />
           )}
           <CardTitle className="text-center -mt-15 z-30 bg-card font-mono max-w-max mx-auto px-20 py-5 rounded-tl-full rounded-tr-full text-foreground dark:text-primary-foreground">
-            <h4 className="text-sm">{project.videoName}</h4>
-            <span className="font-sans text-sm text-card-foreground">
+            <h4 className="text-sm text-primary dark:text-popover-foreground">
+              {project.videoName}
+            </h4>
+            <span className="font-sans text-sm dark:text-gray-500 text-gray-600">
               {project.startDate} - {project.endDate}
             </span>
           </CardTitle>
@@ -46,7 +48,7 @@ function ProjectItem({ project }: ProjectItemProps) {
               ))}
             </div>
             <div className="w-full flex justify-between items-center">
-              <span className=" bg-background px-6 font-medium py-2 rounded-full">
+              <span className="bg-secondary text-primary dark:bg-background dark:text-card-foreground px-6 font-medium py-2 rounded-full">
                 {project.partnerCompany}
               </span>
 
@@ -69,18 +71,18 @@ function ProjectItem({ project }: ProjectItemProps) {
             <h3 className="font-serif text-primary text-3xl">
               {project.projectName}
             </h3>
-            <span className="bg-card border p-3 text-primary rounded-xl capitalize">
+            <span className="bg-secondary/30  dark:bg-card border p-3 text-primary rounded-xl capitalize">
               {project.roles.map(
                 (role, index) =>
                   `${role} ${index !== project.roles.length - 1 ? " • " : ""}`,
               )}
             </span>
           </div>
-          <div className="flex flex-col gap-3 leading-8 text-foreground dark:text-primary-foreground">
+          <div className="flex flex-col gap-3 leading-8 text-gray-700 dark:text-primary-foreground">
             <p>{project.problemDescription}</p>
-            <div className="border-b border-popover/50 my-2"></div>
+            <div className="border-b border-primary/10 dark:border-popover/50 my-2"></div>
             <p>{project.solutionDescription}</p>
-            <div className="border-b border-popover/50 my-2"></div>
+            <div className="border-b border-primary/10 dark:border-popover/50 my-2"></div>
             <p>{project.acquiredKnowledgeDescription}</p>
           </div>
         </div>

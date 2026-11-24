@@ -11,10 +11,10 @@ function HomeSection() {
   const { cta, githubUrl, linkedinUrl, roles } = personalInfo;
 
   return (
-    <div className="dark:bg-[radial-gradient(58.11%_58.11%_at_50%_4.54%,#C53F36_0%,#47010B_57.31%,rgba(15,20,19,0)_90%)] bg-[radial-gradient(58.11%_58.11%_at_50%_4.54%,#FF4E44_0%,#FF9F9A_67.31%,transparent_100%)] w-full flex  align-center justify-center text-primary-foreground">
+    <div className=" dark:bg-[radial-gradient(58.11%_58.11%_at_50%_4.54%,#C53F36_0%,#47010B_57.31%,rgba(15,20,19,0)_90%)] bg-[radial-gradient(58.11%_58.11%_at_50%_4.54%,#FF4E44_0%,#FF9F9A_67.31%,transparent_100%)] w-full flex  align-center justify-center text-primary-foreground">
       <section className="w-full pt-20 lg:pt-0 lg:w-[90%]  xl:w-[75%]  lg:h-screen flex flex-col gap-0 justify-end items-center bg-[radial-gradient(37.94%_37.94%_at_50%_105.42%,rgba(255,78,68,0.50)_0%,rgba(59,4,12,0)_90%)] dark:bg-[radial-gradient(37.94%_37.94%_at_50%_105.42%,rgba(184,56,49,0.26)_0%,rgba(59,4,12,0)_90%)] relative ">
         <ThemeSwitch className="absolute top-5 z-100 right-5 lg:top-10 lg:right-0" />
-        <div className="flex justify-around items-center w-full lg:w-[90%] gap-10 mb-30 flex-col-reverse lg:flex-row">
+        <div className="home-content flex justify-around items-center w-full lg:w-[90%] gap-10 mb-30 flex-col-reverse lg:flex-row">
           <div className="flex flex-col gap-2 w-[90%] lg:w-[55%] mt-10">
             <div className="font-serif">
               <p className="text-primary text-2xl leading-6">Olá, eu sou</p>

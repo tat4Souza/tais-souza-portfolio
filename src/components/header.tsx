@@ -114,7 +114,8 @@ function Header() {
               <NavigationMenuItem>
                 <NavigationMenuLink
                   className="nav__item"
-                  render={<a href="/">Currículo</a>}
+                  render={<a href="curriculo.pdf">Currículo</a>}
+                  download="Curriculo-Tais-Souza.pdf"
                 />
               </NavigationMenuItem>
             </NavigationMenuList>

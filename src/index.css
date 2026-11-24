@@ -200,6 +200,18 @@
     /* scroll-snap-type: y proximity; */
     scroll-behavior: smooth;
   }
+
+  @media (min-width: 1024px) {
+    html {
+      font-size: 90%;
+    }
+
+    .home-content {
+      /* 1 / 0.9 = 1.111... (faz os elementos voltarem ao tamanho original de 100%) */
+      zoom: 1.111;
+    }
+  }
+
   section {
     scroll-snap-align: start;
   }

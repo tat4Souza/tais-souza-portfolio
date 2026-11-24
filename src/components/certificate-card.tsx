@@ -12,7 +12,7 @@ function CertificateCard({ certificate }: { certificate: CertificateProp }) {
   const { platform, courseName, description, documentUrl } = certificate;
 
   return (
-    <Card className="text-base bg-popover/50 rounded-xl overflow-visible flex flex-col items-center max-w-70">
+    <Card className="text-base bg-popover/50 rounded-xl overflow-visible flex flex-col items-center max-w-70 justify-between">
       <CardTitle className="-mt-10 flex flex-col items-center gap-3">
         <span className="bg-popover p-2 px-4 font-serif uppercase text-primary rounded-full">
           {platform}
@@ -27,13 +27,16 @@ function CertificateCard({ certificate }: { certificate: CertificateProp }) {
         <p className="text-center">{description}</p>
       </CardContent>
       <CardFooter>
-        <a
-          href={documentUrl ?? ""}
-          className="text-center text-primary bg-popover p-2 px-4 rounded-xl font-bold flex gap-2 items-center text-sm hover:underline"
-        >
-          Visualizar certificado
-          <FaExternalLinkAlt />
-        </a>
+        {documentUrl && (
+          <a
+            href={documentUrl}
+            target="_blank"
+            className="text-center text-primary bg-popover p-2 px-4 rounded-xl font-bold flex gap-2 items-center text-sm hover:underline"
+          >
+            Visualizar certificado
+            <FaExternalLinkAlt />
+          </a>
+        )}
       </CardFooter>
     </Card>
   );

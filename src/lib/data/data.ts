@@ -29,7 +29,7 @@ export const personalInfo = {
 export const academicProjects: ProjectProps[] = [
   {
     videoName: "API 3° Semestre",
-    videoUrl: "/videos/ordens-servico.mp4",
+    videoUrl: "videos/ordens-servico.mp4",
     projectName: "Sistema de Ordens de Serviço",
     roles: ["Scrum Master", "Designer UI/UX", "Dev Frontend"],
     partnerCompany: "Altave",
@@ -56,7 +56,7 @@ export const academicProjects: ProjectProps[] = [
   },
   {
     videoName: "API 2° Semestre",
-    videoUrl: "/videos/welogic.mp4",
+    videoUrl: "videos/welogic.mp4",
     projectName: "We Logic",
     roles: ["Dev Team", "Designer UI/UX", "Dev Frontend"],
     partnerCompany: "Newe Log",
@@ -74,7 +74,7 @@ export const academicProjects: ProjectProps[] = [
   },
   {
     videoName: "API 1° Semestre",
-    videoUrl: "/videos/devloop.mp4",
+    videoUrl: "videos/devloop.mp4",
     projectName: "DevLoop",
     roles: ["Product Owner", "Designer UI/UX", "Dev Frontend"],
     partnerCompany: "Cliente interno Fatec",
@@ -102,7 +102,7 @@ export const academicProjects: ProjectProps[] = [
 
   {
     videoName: "Desenvolvimento Web II",
-    videoUrl: "/videos/spa-javascript.mp4",
+    videoUrl: "videos/spa-javascript.mp4",
     projectName: "Prática js modular e spa",
     roles: ["Designer UI/UX", "Dev Frontend"],
     partnerCompany: "Atividade Avaliativa",
@@ -120,7 +120,7 @@ export const academicProjects: ProjectProps[] = [
   },
   {
     videoName: "Técnica de programação I",
-    videoUrl: "/videos/greencode.png",
+    videoUrl: "videos/greencode.png",
     projectName: "GreenCode",
     roles: ["Dev Backend"],
 
@@ -143,7 +143,7 @@ export const academicProjects: ProjectProps[] = [
 export const personalProjects = [
   {
     videoName: null,
-    videoUrl: "/videos/puma.mp4",
+    videoUrl: "videos/puma.mp4",
     projectName: "PUMA - Plataforma Unificada de Materiais Acadêmicos",
     roles: ["Idealizadora Parceira", "Designer UI/UX", "Dev Frontend"],
     partnerCompany: "Projeto comunitário",
@@ -179,8 +179,8 @@ export const softSkills = {
 
 export const figmaDesigns = [
   {
-    figma: [{ image: "/designs/storia.png", designName: "Homepage" }],
-    image: "/designs/storia.png",
+    figma: [{ image: "designs/storia.png", designName: "Homepage" }],
+    image: "designs/storia.png",
     designName: "Storia",
     platformGoal:
       "Plataforma web voltada para escritores, oferecendo liberdade para estruturar narrativas, criar taxonomias personalizadas e reutilizar elementos de construção de mundo (worldbuilding) ao longo de seus projetos.",
@@ -193,10 +193,10 @@ export const figmaDesigns = [
   },
   {
     figma: [
-      { image: "/designs/vault76CTA.png", designName: "Tela de CTA" },
-      { image: "/vault76Login.png", designName: "Tela de Login" },
+      { image: "designs/vault76CTA.png", designName: "Tela de CTA" },
+      { image: "vault76Login.png", designName: "Tela de Login" },
     ],
-    image: "/designs/vault76CTA.png",
+    image: "designs/vault76CTA.png",
     designName: "Vault 76",
     platformGoal:
       "Gerenciador de senhas corporativo focado no armazenamento seguro e na auditoria de força e vulnerabilidade das credenciais dos usuários.",
@@ -236,7 +236,8 @@ export const certificates = [
     courseName: "Advanced CSS and Sass",
     description:
       "Criação de arquitetura de estilos com Sass e técnicas avançadas de CSS (Grid, Flexbox)",
-    documentUrl: null,
+    documentUrl:
+      "https://www.udemy.com/certificate/UC-74bc68db-eb6d-4598-bbed-911b79768630/",
   },
   {
     platform: "Cisco Networking Academy",
@@ -250,62 +251,62 @@ export const certificates = [
     courseName: "Curso básico de git",
     description:
       "Aprendizado sobre controle de versão com Git e fluxo de trabalho para projetos de software.",
-    documentUrl: null,
+    documentUrl: "https://cursa.com.br/certificate/f0010f1b3e",
   },
   {
     platform: "Escola SAGA",
     courseName: "Arte Vetorial",
     description:
       "Uso do illustrator para criação de artes vetoriais, logotipos e ilustrações digitais.",
-    documentUrl: null,
+    documentUrl: "https://hub.saga.com.br/certificado?chave=E81A2F53",
   },
   {
     platform: "Escola SAGA",
     courseName: "Composição de Imagens",
     description:
       "Técnicas de composição e manipulação de imagens digitais usando o software Photoshop.",
-    documentUrl: null,
+    documentUrl: "https://hub.saga.com.br/certificado?chave=31A86CC3",
   },
   {
     platform: "Escola SAGA",
     courseName: "VFX e Motion Graphics",
     description:
       "Fundamentos de efeitos visuais (VFX) e criação de animações e elementos visuais.",
-    documentUrl: null,
+    documentUrl: "https://hub.saga.com.br/certificado?chave=FED0A422",
   },
   {
     platform: "Escola SAGA",
     courseName: "Pintura Digital",
     description:
       "Domínio das Ferramentas e técnicas de pintura digital, iluminação e texturização.",
-    documentUrl: null,
+    documentUrl: "https://hub.saga.com.br/certificado?chave=43639BB9",
   },
   {
     platform: "Escola SAGA",
     courseName: "3D 1 - Cenários",
     description:
       "Modelagem 3D de cenários e ambientes, incluindo texturização e renderização.",
-    documentUrl: null,
+    documentUrl: "https://hub.saga.com.br/certificado?chave=5F6448D2",
   },
   {
     platform: "Escola SAGA",
     courseName: "3D 2 - Personagens",
     description:
       "Modelagem 3D e escultura digital de personagens, retopologia e mapeamento UV.",
-    documentUrl: null,
+    documentUrl: "https://hub.saga.com.br/certificado?chave=E294BBE4",
   },
   {
     platform: "Escola SAGA",
     courseName: "3D 3 - Animação",
     description:
       "Introdução aos princípios de animação 3D, rigging de personagens e técnicas de movimentação.",
-    documentUrl: null,
+    documentUrl: "https://hub.saga.com.br/certificado?chave=792C6790  ",
   },
   {
     platform: "Escola SAGA",
     courseName: "Edição audiovisual",
     description:
       "Técnicas de edição e montagem de vídeos, incluindo correção de cor e sincronização de áudios.",
-    documentUrl: null,
+    documentUrl: "https://hub.saga.com.br/certificado?chave=29CDCC8F",
   },
 ];

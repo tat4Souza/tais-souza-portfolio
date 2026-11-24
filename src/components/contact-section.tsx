@@ -12,7 +12,7 @@ function ContactSection() {
       className="h-min-[95vh] h-[95vh] flex flex-col  w-full sm:w-[75%] gap-10 bg-[radial-gradient(52.78%_52.78%_at_50%_9.42%,rgba(184,56,49,0.26)_0%,rgba(59,4,12,0.00)_100%)] relative"
     >
       <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-0 pointer-events-none">
-        <img src="/star.svg" alt="Estrela decorativa" />
+        <img src="star.svg" alt="Estrela decorativa" />
       </div>
       <div className="flex flex-col items-center justify-center h-full z-10">
         <h3 className="font-mono text-4xl text-primary mb-3">Contato</h3>

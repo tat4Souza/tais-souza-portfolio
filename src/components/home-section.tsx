@@ -44,7 +44,7 @@ function HomeSection() {
           <div className="relative">
             <figure className="w-50  sm:w-80 rounded-full overflow-hidden">
               <video
-                src="/photo-animation.mp4"
+                src="photo-animation.mp4"
                 preload="metadata"
                 autoPlay
                 muted
@@ -56,7 +56,7 @@ function HomeSection() {
 
             <figure className="absolute -right-5 -bottom-20 sm:-right-30 sm:-bottom-35 w-30 sm:w-80">
               <img
-                src="/photo-details.svg"
+                src="photo-details.svg"
                 alt="Detalhes de design"
                 className="w-auto h-auto"
               />

@@ -20,10 +20,10 @@ function AboutSection() {
   return (
     <section
       id="about"
-      className="min-h-min h-screen flex flex-col pt-35 w-[90%] sm:w-[75%] bg-[radial-gradient(52.78%_52.78%_at_50%_90.58%,rgba(184,56,49,0.26)_0%,rgba(59,4,12,0.00)_100%)] pb-20"
+      className="min-h-min h-screen flex flex-col pt-35 w-[90%] xl:w-[75%] bg-[radial-gradient(52.78%_52.78%_at_50%_90.58%,rgba(184,56,49,0.26)_0%,rgba(59,4,12,0.00)_100%)] pb-20 "
     >
-      <div className="flex gap-15 mb-30 flex-col sm:flex-row">
-        <div className="w-full sm:w-[40%]">
+      <div className="flex gap-15 mb-30 flex-col lg:flex-row">
+        <div className="w-full lg:w-[40%]">
           <h4 className="dark:text-primary-foreground text-5xl mb-6 font-serif">
             Sobre mim
           </h4>
@@ -52,7 +52,7 @@ function AboutSection() {
             {cert.map((item, index) => (
               <CarouselItem
                 key={index}
-                className="pl-4 basis-full flex justify-center  sm:basis-1/4"
+                className="pl-4 basis-full flex justify-center md:basis-2/4 lg:basis-1/3 xl:basis-1/4"
               >
                 <CertificateCard certificate={item} />
               </CarouselItem>

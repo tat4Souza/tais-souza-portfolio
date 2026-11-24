@@ -10,7 +10,7 @@ function DegreesCard({ course }: { course: CourseProps }) {
     <Card className="rounded-xl bg-card/80">
       <CardTitle className="px-8 flex flex-col gap-4">
         <CardDescription className="text-primary font-bold text-base  ">
-          <div className="flex justify-between flex-col-reverse sm:flex-row gap-4 sm:gap-0">
+          <div className="flex justify-between flex-col-reverse xl:flex-row gap-4 xl:gap-0">
             <div className="flex gap-3 items-center ">
               <FaGraduationCap
                 size={20}

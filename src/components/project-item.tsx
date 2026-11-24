@@ -12,7 +12,7 @@ interface ProjectItemProps {
 function ProjectItem({ project }: ProjectItemProps) {
   return (
     <CarouselItem>
-      <div className="p-1 flex  min-h-content items-center gap-8 flex-col-reverse sm:flex-row">
+      <div className="p-1 flex  min-h-content items-center gap-8 flex-col-reverse xl:flex-row">
         <Card className="flex-1 pt-0 bg-card h-full!  max-h-min">
           {!project.image ? (
             <video

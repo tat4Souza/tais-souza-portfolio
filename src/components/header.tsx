@@ -79,15 +79,15 @@ function Header() {
         ref={headerRef}
         className={`fixed inset-x-0 top-0 z-50 py-3 ${
           isFixed
-            ? "md:fixed md:inset-x-0 md:top-0 md:bg-background/80 md:backdrop-blur md:py-3"
-            : "md:static md:bg-transparent md:backdrop-blur-none md:py-0"
+            ? "lg:fixed  lg:inset-x-0 lg:top-0 lg:bg-background/80 lg:backdrop-blur lg:py-3"
+            : "lg:static lg:bg-transparent lg:backdrop-blur-none lg:py-0"
         }`}
       >
         <div
-          className={`mx-auto w-[90%] ${isFixed ? "md:w-[75%]" : "md:w-full"}`}
+          className={`mx-auto w-[90%] ${isFixed ? "xl:w-[75%]" : "lg:w-full"}`}
         >
           {/* DESKTOP */}
-          <NavigationMenu className="hidden md:flex max-w-full w-full">
+          <NavigationMenu className="hidden lg:flex max-w-full w-full">
             <NavigationMenuList className="justify-between">
               {navOptions.map(({ title, url }) => {
                 const isActive = activeHash === url;
@@ -121,7 +121,7 @@ function Header() {
           </NavigationMenu>
 
           {/* MOBILE: apenas o botão hambúrguer à esquerda */}
-          <div className="relative flex md:hidden top-3 items-center justify-start z-100">
+          <div className="relative flex lg:hidden top-3 items-center justify-start z-100">
             <button
               type="button"
               onClick={() => setMobileMenuOpen((prev) => !prev)}
@@ -140,7 +140,7 @@ function Header() {
 
         {/* MOBILE: menu dropdown */}
         {mobileMenuOpen && (
-          <nav className="md:hidden absolute h-screen inset-x-0 top-0 z-10  bg-background border-b border-foreground/15 shadow-lg">
+          <nav className="lg:hidden absolute h-screen inset-x-0 top-0 z-10  bg-background border-b border-foreground/15 shadow-lg">
             <ul className="flex flex-col gap-1 p-4 mx-auto mt-20 w-[90%]">
               {navOptions.map(({ title, url }) => {
                 const isActive = activeHash === url;

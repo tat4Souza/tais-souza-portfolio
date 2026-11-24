@@ -7,9 +7,6 @@ import SkillsSection from "./components/skills-section";
 function App() {
   return (
     <>
-      <div className="w-full h-10 bg-red-600 sm:bg-amber-300 md:bg-blue-600 lg:bg-pink-300 xl:bg-green-600 2xl:bg-purple-500">
-        bla
-      </div>
       <HomeSection />
       <ProjectsSection />
       <SkillsSection />

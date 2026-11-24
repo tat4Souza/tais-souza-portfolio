@@ -205,7 +205,7 @@
   }
 
   .nav__item {
-    @apply bg-card/50 hover:bg-popover/50! px-12! py-2! border rounded-tr-none! rounded-bl-none! text-primary font-serif text-xl!;
+    @apply bg-card/50 hover:bg-popover/50! xl:px-12! py-2! border rounded-tr-none! rounded-bl-none! text-primary font-serif px-10! text-base xl:text-xl!;
   }
 
   .h3-title {

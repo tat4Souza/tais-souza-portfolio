@@ -142,7 +142,7 @@ export const academicProjects: ProjectProps[] = [
 
 export const personalProjects = [
   {
-    videoName: null,
+    videoName: "Projeto coletivo",
     videoUrl: "videos/puma.mp4",
     projectName: "PUMA - Plataforma Unificada de Materiais Acadêmicos",
     roles: ["Idealizadora Parceira", "Designer UI/UX", "Dev Frontend"],

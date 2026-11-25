@@ -4,6 +4,7 @@ import { Card, CardContent, CardTitle } from "./ui/card";
 import { CarouselItem } from "./ui/carousel";
 import type { ProjectProps } from "@/lib/types";
 import LinkButton from "./link-button";
+import { VideoAmbilight } from "@videoglow/react-video";
 
 interface ProjectItemProps {
   project: ProjectProps;
@@ -13,9 +14,9 @@ function ProjectItem({ project }: ProjectItemProps) {
   return (
     <CarouselItem>
       <div className="p-1 flex  min-h-content items-center gap-8 flex-col-reverse xl:flex-row">
-        <Card className="flex-1 pt-0 bg-card  to-card h-full!  max-h-min  reveal-item">
+        <Card className="flex-1 pt-0 bg-card gap-0  to-card h-full!  max-h-min  reveal-item">
           {!project.image ? (
-            <video
+            <VideoAmbilight
               src={project.videoUrl ?? ""}
               preload="metadata"
               autoPlay
@@ -23,15 +24,25 @@ function ProjectItem({ project }: ProjectItemProps) {
               loop
               playsInline
               className="relative z-20 aspect-video w-full object-cover object-top"
+              blur={60}
             />
           ) : (
+            // <video
+            //   src={project.videoUrl ?? ""}
+            //   preload="metadata"
+            //   autoPlay
+            //   muted
+            //   loop
+            //   playsInline
+            //   className="relative z-20 aspect-video w-full object-cover object-top"
+            // />
             <img
               src={project.videoUrl ?? ""}
               alt="imagem"
               className="relative z-20 aspect-video w-full object-cover object-top"
             />
           )}
-          <CardTitle className="text-center -mt-15 z-30 bg-card font-mono max-w-max mx-auto px-20 py-5 rounded-tl-full rounded-tr-full text-foreground dark:text-primary-foreground reveal-item">
+          <CardTitle className="text-center   z-30 font-mono max-w-max mx-auto px-20 my-5   rounded-full text-foreground dark:text-primary-foreground reveal-item">
             <h4 className="text-sm text-primary dark:text-popover-foreground">
               {project.videoName}
             </h4>
@@ -39,7 +50,7 @@ function ProjectItem({ project }: ProjectItemProps) {
               {project.startDate} - {project.endDate}
             </span>
           </CardTitle>
-          <CardContent className="h-full flex flex-col justify-between gap-5  max-h-min -mt-5 ">
+          <CardContent className=" h-full flex flex-col justify-between gap-5  max-h-min mt-3 ">
             <div className="flex gap-2 flex-wrap justify-center">
               {project.technologies.map((tech) => (
                 <Badge className="p-3 capitalize" key={tech}>

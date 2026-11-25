@@ -9,7 +9,7 @@ function TechStackRow({
   techsList: string[];
 }) {
   return (
-    <Card className="rounded-xl flex-1 bg-linear-to-t from-primary/10 to-transparent">
+    <Card className="rounded-xl flex-1 bg-linear-to-t from-primary/10 to-transparent reveal-item">
       <CardTitle className="pl-8 text-[18px] font-semibold text-primary dark:text-foreground ">
         {title}
       </CardTitle>

@@ -28,10 +28,10 @@ function SkillsSection() {
   return (
     <section
       id="skills"
-      className="h-min-screen xl:h-screen flex flex-col pt-25 w-[90%] xl:w-[75%] gap-10"
+      className="h-min-screen xl:h-screen flex flex-col pt-25 w-[90%] xl:w-[75%] gap-10 "
     >
       <div className="flex flex-col w-full">
-        <h3 className="h3-title mb-6">Stack de Habilidades</h3>
+        <h3 className="h3-title mb-6 reveal-item">Stack de Habilidades</h3>
         <div className="flex gap-6 flex-col lg:flex-row ">
           <TechStackRow
             title="Desenvolvimetno Frontend"
@@ -45,7 +45,7 @@ function SkillsSection() {
         </div>
       </div>
       <div className="flex gap-6 flex-col lg:flex-row">
-        <Card className="rounded-xl flex-1">
+        <Card className="rounded-xl flex-1 reveal-item">
           <CardTitle className="pl-8 text-[18px] font-semibold text-primary">
             Soft Skills
           </CardTitle>
@@ -65,7 +65,7 @@ function SkillsSection() {
             </ul>
           </CardContent>
         </Card>
-        <Card className="flex-1 rounded-xl">
+        <Card className="flex-1 rounded-xl reveal-item">
           <CardTitle className="pl-8 ">
             <h4 className="text-[18px] font-semibold  text-primary">
               Figma Designs

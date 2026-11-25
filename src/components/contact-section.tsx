@@ -23,15 +23,17 @@ function ContactSection() {
           className="w-auto h-auto hidden dark:block"
         />
       </div>
-      <div className="flex flex-col items-center justify-center h-full z-10">
-        <h3 className="font-mono text-4xl text-primary mb-3">Contato</h3>
-        <p className="text-secondary-foreground dark:text-primary-foreground w-[80%]  lg:w-[30%] text-center mb-6">
+      <div className="flex flex-col items-center justify-center h-full z-10 ">
+        <h3 className="font-mono text-4xl text-primary mb-3 reveal-item">
+          Contato
+        </h3>
+        <p className="text-secondary-foreground dark:text-primary-foreground w-[80%]  lg:w-[30%] text-center mb-6 reveal-item">
           Entre em contato comigo para trabalharmos juntos.
         </p>
         <a
           href="mailto:taiss.fernandes.souza@gmail.com"
           target="_blank"
-          className="bg-card border cursor-pointer p-3 text-primary rounded-xl mb-4 flex gap-2 items-center hover:underline hover:**:-translate-y-0.5 "
+          className="bg-card border cursor-pointer p-3 text-primary rounded-xl mb-4 flex gap-2 items-center hover:underline hover:**:-translate-y-0.5 reveal-item"
         >
           <MdOutlineAlternateEmail className="transition-all" />
           <span className="transition-all">
@@ -39,7 +41,7 @@ function ContactSection() {
           </span>
         </a>
 
-        <div className="flex gap-3 mt-2">
+        <div className="flex gap-3 mt-2 reveal-item">
           <CustomButton link url={githubUrl}>
             <FaGithub className="size-5" />
           </CustomButton>

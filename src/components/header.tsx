@@ -73,6 +73,46 @@ function Header() {
     setMobileMenuOpen(false);
   };
 
+  useEffect(() => {
+    const sectionIds = ["projects", "skills", "about", "contact"];
+
+    const handleScrollSpy = () => {
+      const firstSection = document.getElementById(sectionIds[0]);
+      const triggerLine = window.innerHeight * 0.35;
+
+      if (
+        !firstSection ||
+        firstSection.getBoundingClientRect().top > triggerLine
+      ) {
+        setActiveHash("#");
+        return;
+      }
+
+      let current = "#";
+      for (const id of sectionIds) {
+        const el = document.getElementById(id);
+        if (el) {
+          const rect = el.getBoundingClientRect();
+          if (rect.top <= triggerLine) {
+            current = `#${id}`;
+          }
+        }
+      }
+      const reachedBottom =
+        window.innerHeight + window.scrollY >=
+        document.documentElement.scrollHeight - 20;
+      if (reachedBottom) {
+        current = `#${sectionIds[sectionIds.length - 1]}`;
+      }
+
+      setActiveHash(current);
+    };
+
+    handleScrollSpy();
+    window.addEventListener("scroll", handleScrollSpy, { passive: true });
+    return () => window.removeEventListener("scroll", handleScrollSpy);
+  }, []);
+
   return (
     <div ref={placeholderRef} style={{ height }} className="w-full">
       <header

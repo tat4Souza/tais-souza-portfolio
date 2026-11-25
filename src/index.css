@@ -217,7 +217,7 @@
   }
 
   .nav__item {
-    @apply dark:bg-card/50 dark:hover:bg-popover/50! xl:px-12! py-2! border rounded-tr-none! rounded-bl-none! dark:text-primary font-serif px-10! dark:border-border text-base xl:text-xl! bg-secondary/50 text-primary hover:bg-secondary! border-primary/10;
+    @apply dark:bg-card/50 dark:hover:bg-popover/50! xl:px-12! py-2! border rounded-tr-none! rounded-bl-none! dark:text-primary font-serif px-10! dark:border-border text-xl! bg-secondary/50 text-primary hover:bg-secondary! border-primary/10;
   }
 
   .h3-title {

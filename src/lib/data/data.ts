@@ -193,8 +193,51 @@ export const figmaDesigns = [
   },
   {
     figma: [
-      { image: "designs/vault76CTA.png", designName: "Tela de CTA" },
-      { image: "vault76Login.png", designName: "Tela de Login" },
+      {
+        image: "designs/VAULT76/1_landing_page.png",
+        designName: "Tela de Landing page 1",
+      },
+      {
+        image: "designs/VAULT76/2_landing_page.png",
+        designName: "Tela de Landing page 2",
+      },
+      {
+        image: "designs/VAULT76/3_landing_page.png",
+        designName: "Tela de Landing page 3",
+      },
+      {
+        image: "designs/VAULT76/4_landing_page.png",
+        designName: "Tela de Landing page 4",
+      },
+      { image: "designs/VAULT76/5_about.png", designName: "Tela Sobre 1" },
+      { image: "designs/VAULT76/6_about.png", designName: "Tela Sobre 2" },
+      { image: "designs/VAULT76/7_about.png", designName: "Tela Sobre 3" },
+      { image: "designs/VAULT76/8_about.png", designName: "Tela Sobre 4" },
+      { image: "designs/VAULT76/9_login.png", designName: "Tela de Login" },
+      {
+        image: "designs/VAULT76/10_code_verification.png",
+        designName: "Tela de Verificação de Código",
+      },
+      {
+        image: "designs/VAULT76/11_dashboard_1.png",
+        designName: "Tela de Dashboard 1",
+      },
+      {
+        image: "designs/VAULT76/12_dashboard_2.png",
+        designName: "Tela de Dashboard 2",
+      },
+      {
+        image: "designs/VAULT76/13_dashboard_3.png",
+        designName: "Tela de Dashboard 3",
+      },
+      {
+        image: "designs/VAULT76/14_verify.png",
+        designName: "Tela de Verificação de Senha",
+      },
+      {
+        image: "designs/VAULT76/15_generate.png",
+        designName: "Tela de Geração de Senha",
+      },
     ],
     image: "designs/vault76CTA.png",
     designName: "Vault 76",

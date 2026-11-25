@@ -13,7 +13,7 @@ function ProjectItem({ project }: ProjectItemProps) {
   return (
     <CarouselItem>
       <div className="p-1 flex  min-h-content items-center gap-8 flex-col-reverse xl:flex-row">
-        <Card className="flex-1 pt-0 bg-card  to-card h-full!  max-h-min ">
+        <Card className="flex-1 pt-0 bg-card  to-card h-full!  max-h-min  reveal-item">
           {!project.image ? (
             <video
               src={project.videoUrl ?? ""}
@@ -31,7 +31,7 @@ function ProjectItem({ project }: ProjectItemProps) {
               className="relative z-20 aspect-video w-full object-cover object-top"
             />
           )}
-          <CardTitle className="text-center -mt-15 z-30 bg-card font-mono max-w-max mx-auto px-20 py-5 rounded-tl-full rounded-tr-full text-foreground dark:text-primary-foreground">
+          <CardTitle className="text-center -mt-15 z-30 bg-card font-mono max-w-max mx-auto px-20 py-5 rounded-tl-full rounded-tr-full text-foreground dark:text-primary-foreground reveal-item">
             <h4 className="text-sm text-primary dark:text-popover-foreground">
               {project.videoName}
             </h4>
@@ -39,7 +39,7 @@ function ProjectItem({ project }: ProjectItemProps) {
               {project.startDate} - {project.endDate}
             </span>
           </CardTitle>
-          <CardContent className="h-full flex flex-col justify-between gap-5  max-h-min -mt-5">
+          <CardContent className="h-full flex flex-col justify-between gap-5  max-h-min -mt-5 ">
             <div className="flex gap-2 flex-wrap justify-center">
               {project.technologies.map((tech) => (
                 <Badge className="p-3 capitalize" key={tech}>
@@ -67,11 +67,11 @@ function ProjectItem({ project }: ProjectItemProps) {
           </CardContent>
         </Card>
         <div className="flex-1 flex flex-col gap-10 justify-center">
-          <div className="flex flex-col gap-2">
-            <h3 className="font-serif text-primary text-3xl">
+          <div className="flex flex-col gap-2 reveal-item">
+            <h3 className="font-serif text-primary text-3xl ">
               {project.projectName}
             </h3>
-            <span className="bg-secondary/30  dark:bg-card border p-3 text-primary rounded-xl capitalize">
+            <span className="bg-secondary/30  dark:bg-card border p-3 text-primary rounded-xl capitalize ">
               {project.roles.map(
                 (role, index) =>
                   `${role} ${index !== project.roles.length - 1 ? " • " : ""}`,
@@ -79,11 +79,13 @@ function ProjectItem({ project }: ProjectItemProps) {
             </span>
           </div>
           <div className="flex flex-col gap-3 leading-8 text-gray-700 dark:text-primary-foreground">
-            <p>{project.problemDescription}</p>
+            <p className="reveal-item">{project.problemDescription}</p>
             <div className="border-b border-primary/10 dark:border-popover/50 my-2"></div>
-            <p>{project.solutionDescription}</p>
+            <p className="reveal-item">{project.solutionDescription}</p>
             <div className="border-b border-primary/10 dark:border-popover/50 my-2"></div>
-            <p>{project.acquiredKnowledgeDescription}</p>
+            <p className="reveal-item">
+              {project.acquiredKnowledgeDescription}
+            </p>
           </div>
         </div>
       </div>

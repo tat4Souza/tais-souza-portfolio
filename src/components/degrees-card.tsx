@@ -7,7 +7,7 @@ function DegreesCard({ course }: { course: CourseProps }) {
   const { name, institution, startDate, endDate } = course;
 
   return (
-    <Card className="rounded-xl bg-card/80">
+    <Card className="rounded-xl bg-card/80 reveal-item">
       <CardTitle className="px-8 flex flex-col gap-4">
         <CardDescription className="text-primary font-bold text-base  ">
           <div className="flex justify-between flex-col-reverse xl:flex-row gap-4 xl:gap-0">

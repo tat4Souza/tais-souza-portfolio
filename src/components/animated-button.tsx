@@ -59,7 +59,7 @@ function AnimatedButton({
     >
       <div
         className={cn(
-          "dark:bg-sidebar! rounded-full border cursor-pointer w-auto h-auto p-3 flex justify-center items-center border-border hover:bg-muted aria-expanded:bg-muted aria-expanded:text-foreground  dark:hover:bg-input/30 z-10 transition-all duration-500      dark:text-popover-foreground text-primary bg-primary/10 ",
+          "dark:bg-sidebar! rounded-full border cursor-pointer w-auto h-auto p-3 flex justify-center items-center border-border hover:bg-muted aria-expanded:bg-muted aria-expanded:text-foreground  dark:hover:bg-input/30 z-10 transition-all      dark:text-popover-foreground text-primary bg-primary/10 ",
           className,
         )}
       >

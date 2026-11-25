@@ -20,14 +20,14 @@ function AboutSection() {
   return (
     <section
       id="about"
-      className="min-h-min h-screen flex flex-col pt-35 w-[90%] xl:w-[75%] bg-[radial-gradient(52.78%_52.78%_at_50%_90.58%,rgba(184,56,49,0.26)_0%,rgba(59,4,12,0.00)_100%)] pb-20 "
+      className="min-h-min h-screen flex flex-col pt-35 w-[90%] xl:w-[75%] bg-[radial-gradient(52.78%_52.78%_at_50%_90.58%,rgba(184,56,49,0.26)_0%,rgba(59,4,12,0.00)_100%)] pb-20 reveal-section"
     >
       <div className="flex gap-15 mb-30 flex-col lg:flex-row">
         <div className="w-full lg:w-[40%]">
-          <h4 className="text-primary  dark:text-primary-foreground text-5xl mb-6 font-serif">
+          <h4 className="text-primary  dark:text-primary-foreground text-5xl mb-6 font-serif reveal-item">
             Sobre mim
           </h4>
-          <div>
+          <div className="reveal-item">
             <p className="text-gray-600 dark:text-foreground leading-8">
               {aboutMeSummary}
             </p>
@@ -43,7 +43,7 @@ function AboutSection() {
         </ul>
       </div>
 
-      <div className="flex flex-col gap-4 w-full">
+      <div className="flex flex-col gap-4 w-full reveal-item">
         <Carousel
           setApi={setApi}
           opts={{

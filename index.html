@@ -4,9 +4,19 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/tais-souza-portfolio/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Taís Fernandes de Souza</title>
-    <script type="module" crossorigin src="/tais-souza-portfolio/assets/index-7wEvc3et.js"></script>
-    <link rel="stylesheet" crossorigin href="/tais-souza-portfolio/assets/index-diDSnoYY.css">
+
+    <script>
+      const theme = localStorage.getItem("theme");
+
+      if (theme === "dark" || (!theme && true)) {
+        document.documentElement.classList.add("dark");
+      } else {
+        document.documentElement.classList.remove("dark");
+      }
+    </script>
+    <title>Taís Fernandes de Souza | Portfólio</title>
+    <script type="module" crossorigin src="/tais-souza-portfolio/assets/index-yqIDXRRu.js"></script>
+    <link rel="stylesheet" crossorigin href="/tais-souza-portfolio/assets/index-BI3Hndfc.css">
   </head>
   <body>
     <main id="root" class="flex flex-col justify-center items-center"></main>
